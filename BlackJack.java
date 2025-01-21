@@ -83,6 +83,11 @@ public class BlackJack {
                 System.out.println("Pick a bet amount. Your current balance is " + playerbalance + "."); //ADDED FOR BETTING
                 playerBet = scanner.nextInt();                                                           //ADDED FOR BETTING
                 String dummy = scanner.nextLine();                                                       //ADDED FOR BETTING
+                while(playerBet > playerbalance || playerBet < 0){                                       //ADDED FOR BETTING
+                    System.out.println("That amount is not valid. Try again");                        // added to print out try again if the bet amount is larger than the limit 
+                    playerBet = scanner.nextInt();                                                       //ADDED FOR BETTING
+                    dummy = scanner.nextLine();                                                          //ADDED FOR BETTING
+                }                                                                                        //ADDED FOR BETTING
                 betPlaced = true;                                                                        //ADDED FOR BETTING
             }
             
